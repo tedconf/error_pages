@@ -36,10 +36,6 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass']
       },
-      html: {
-        files: ['<%= yeoman.app %>/{,*/}*.html'],
-        tasks: ['replace:server']
-      },
       livereload: {
         files: [
           '<%= yeoman.app %>/*.html',
@@ -47,7 +43,7 @@ module.exports = function (grunt) {
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,webp}'
         ],
-        tasks: ['livereload']
+        tasks: ['replace:server', 'livereload']
       }
     },
     connect: {
@@ -196,8 +192,10 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '.tmp/styles/error.min.css': [
-            '.tmp/styles/{,*/}*.css',
-            '<%= yeoman.app %>/styles/{,*/}*.css'
+            '.tmp/styles/error.css',
+          ],
+          '.tmp/styles/error_fixurl.min.css': [
+            '.tmp/styles/error_fixurl.css',
           ]
         }
       }
@@ -226,7 +224,10 @@ module.exports = function (grunt) {
       server: {
         options: {
           variables: {
-            styles: '<%= grunt.file.read(".tmp/styles/error.css") %>'
+            header: '<%= grunt.file.read(yeoman.app + "/parts/header.html") %>',
+            footer: '<%= grunt.file.read(yeoman.app + "/parts/footer.html") %>',
+            styles: '<%= grunt.file.read(".tmp/styles/error.css") %>',
+            stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.css") %>'
           }
         },
         files: [
@@ -241,7 +242,10 @@ module.exports = function (grunt) {
       dist: {
         options: {
           variables: {
-            styles: '<%= grunt.file.read(".tmp/styles/error.min.css") %>'
+            header: '<%= grunt.file.read(yeoman.app + "/parts/header.html") %>',
+            footer: '<%= grunt.file.read(yeoman.app + "/parts/footer.html") %>',
+            styles: '<%= grunt.file.read(".tmp/styles/error.min.css") %>',
+            stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.min.css") %>'
           }
         },
         files: [

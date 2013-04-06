@@ -227,7 +227,8 @@ module.exports = function (grunt) {
             header: '<%= grunt.file.read(yeoman.app + "/parts/header.html") %>',
             footer: '<%= grunt.file.read(yeoman.app + "/parts/footer.html") %>',
             styles: '<%= grunt.file.read(".tmp/styles/error.css") %>',
-            stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.css") %>'
+            stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.css") %>',
+            suggestions: '<%= grunt.file.read(yeoman.app + "/parts/suggestions.html") %>'
           }
         },
         files: [
@@ -245,7 +246,8 @@ module.exports = function (grunt) {
             header: '<%= grunt.file.read(yeoman.app + "/parts/header.html") %>',
             footer: '<%= grunt.file.read(yeoman.app + "/parts/footer.html") %>',
             styles: '<%= grunt.file.read(".tmp/styles/error.min.css") %>',
-            stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.min.css") %>'
+            stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.min.css") %>',
+            suggestions: '<%= grunt.file.read(yeoman.app + "/parts/suggestions.html") %>'
           }
         },
         files: [

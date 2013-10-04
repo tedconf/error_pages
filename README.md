@@ -1,8 +1,19 @@
 # TED Error Pages
 
-This repo is used to maintain the error pages we serve.
+This Rails gem houses the error pages used for TED sites and web
+apps.
 
-## Getting started
+## Installation
+
+Add this line to your Rails app's Gemfile:
+
+    gem 'error_pages', git: 'git@github.com:tedconf/error_pages.git'
+
+And then execute:
+
+    $ bundle update error_pages
+
+## Contributing
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide. It explains how to install Grunt's CLI.
 
@@ -10,20 +21,22 @@ Once you have the Grunt CLI installed, install this project's package dependenci
 
 	$ npm install
 
-## Builds
+### Building static pages
 
 Once you're set up, run:
 
 	$ grunt build
 
-...will build output to the /dist folder. Once done, you can simply
-copy the files you need from there to the final destination of your
-error page.
+This will build output to the /public folder for distribution.
 
-## Tweaks
+### Serving pages while editing
 
-Once you're set up, run:
+For convenience, you can serve the error pages while you're editing
+them. They'll even livereload as you make changes. Swish.
+
+Simply run:
 
 	$ grunt server
 
-...and a browser window should open at http://localhost:9000 where your changes to the error pages will be livereloaded.
+A browser window should open at http://localhost:9000 where your
+changes to the error pages will be livereloaded.

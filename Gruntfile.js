@@ -18,7 +18,7 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist'
+    dist: 'public'
   };
 
   grunt.initConfig({
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
         options: {
           middleware: function (connect) {
             return [
-              mountFolder(connect, 'dist')
+              mountFolder(connect, yeomanConfig.dist)
             ];
           }
         }

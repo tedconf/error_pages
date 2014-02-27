@@ -12,6 +12,8 @@ Gem::Specification.new do |gem|
   gem.email         = ["joe@ted.com"]
   gem.homepage      = "https://github.com/tedconf/error_pages"
 
+  gem.add_development_dependency 'compass'
+
   gem.files         = Dir["{public}/*"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

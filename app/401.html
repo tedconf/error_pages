@@ -9,13 +9,30 @@
   </style>
 </head>
 <body>
-@@header
 
-<h1>Not Authorized</h1>
+<div class="header">
+  <div class="container">
+    @@header
+  </div>
+</div>
 
-<p>It seems you don't have access to this resource. Please contact <a href="ted.com/contact">TED Support</a> if this is incorrect.</p>
+<div class="container">
+  <div class="content">
+    <h1>Something's gone wrong</h1>
+    @@logo2
+    <h3>Sorry, we’re experiencing technical difficulties.</h3>
+    <p>Please let us know what happened. Email us at <a href="mailto:contact@ted.com">contact@ted.com</a>. Or just take a break and watch Renny Gleeson’s talk, <a href="http://www.ted.com/talks/renny_gleeson_404_the_story_of_a_page_not_found">404, the story of a page not found</a>.
+    </p>
+    <p class="error-type">Error: 401</p>
+  </div>
+</div>
 
 @@footer
+
+
+
+<script>var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;</script>
+
 
 <script>ga('send', 'event', 'error', '401', location.hostname + location.pathname);</script>
 

@@ -225,6 +225,9 @@ module.exports = function (grunt) {
         options: {
           variables: {
             header: '<%= grunt.file.read(yeoman.app + "/parts/header.html") %>',
+            logo1: '<%= grunt.file.read(yeoman.app + "/parts/logo_1.html") %>',
+            logo2: '<%= grunt.file.read(yeoman.app + "/parts/logo_2.html") %>',
+            logo3: '<%= grunt.file.read(yeoman.app + "/parts/logo_3.html") %>',
             footer: '<%= grunt.file.read(yeoman.app + "/parts/footer.html") %>',
             styles: '<%= grunt.file.read(".tmp/styles/error.css") %>',
             stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.css") %>',
@@ -244,6 +247,9 @@ module.exports = function (grunt) {
         options: {
           variables: {
             header: '<%= grunt.file.read(yeoman.app + "/parts/header.html") %>',
+            logo1: '<%= grunt.file.read(yeoman.app + "/parts/logo_1.html") %>',
+            logo2: '<%= grunt.file.read(yeoman.app + "/parts/logo_2.html") %>',
+            logo3: '<%= grunt.file.read(yeoman.app + "/parts/logo_3.html") %>',
             footer: '<%= grunt.file.read(yeoman.app + "/parts/footer.html") %>',
             styles: '<%= grunt.file.read(".tmp/styles/error.min.css") %>',
             stylesFixurl: '<%= grunt.file.read(".tmp/styles/error_fixurl.min.css") %>',

@@ -9,22 +9,30 @@
   </style>
 </head>
 <body>
-@@header
 
-<h1>Page Not found</h1>
+<div class="header">
+  <div class="container">
+    @@header
+  </div>
+</div>
 
-<p>Sorry, but the page you were trying to view does not exist.</p>
-
-<p>It looks like this was the result of either:</p>
-<ul>
-  <li>A mistyped address.</li>
-  <li>An out-of-date link.</li>
-</ul>
-
-<script>var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;</script>
-<script src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+<div class="container">
+  <div class="content">
+    <h1>Something's missing!</h1>
+    @@logo1
+    <h3>Sorry, we can’t find what you were looking for.</h3>
+    <p>If you think you’ve reached this page in error, please visit <a href="http://support.ted.com">support.TED.com</a>. In the meantime, why not take a break and watch Renny Gleeson’s talk, <a href="http://www.ted.com/talks/renny_gleeson_404_the_story_of_a_page_not_found">404, the story of a page not found</a>.
+    </p>
+    <p class="error-type">Error: 404</p>
+  </div>
+</div>
 
 @@footer
+
+
+
+<script>var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;</script>
+
 
 <script>ga('send', 'event', 'error', '404', location.hostname + location.pathname);</script>
 

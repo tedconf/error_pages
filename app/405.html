@@ -9,13 +9,30 @@
   </style>
 </head>
 <body>
-@@header
 
-<h1>Method not supported by this URL</h1>
+<div class="header">
+  <div class="container">
+    @@header
+  </div>
+</div>
 
-<p>The post or other HTTP method you requested is not supported by this URL.</p>
+<div class="container">
+  <div class="content">
+    <h1>Something doesn't compute</h1>
+    @@logo2
+    <h3>Sorry, we can’t find what you were looking for.</h3>
+    <p>For more information, please visit <a href="http://support.ted.com">support.ted.com</a>. In the meantime, why not take a break and watch Renny Gleeson’s talk, <a href="http://www.ted.com/talks/renny_gleeson_404_the_story_of_a_page_not_found">404, the story of a page not found</a>.
+    </p>
+    <p class="error-type">Error: 405</p>
+  </div>
+</div>
 
 @@footer
+
+
+
+<script>var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;</script>
+
 
 <script>ga('send', 'event', 'error', '405', location.hostname + location.pathname);</script>
 

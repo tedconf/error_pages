@@ -21,6 +21,10 @@ Once you have the Grunt CLI installed, install this project's package dependenci
 
 	$ npm install
 
+And of course its ruby dependencies:
+
+	$ bundle install
+
 ### Building static pages
 
 Once you're set up, run:

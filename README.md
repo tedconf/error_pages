@@ -3,15 +3,9 @@
 This Rails gem houses the error pages used for TED sites and web
 apps.
 
-## Installation
+## Deprecation notice
 
-Add this line to your Rails app's Gemfile:
-
-    gem 'error_pages', git: 'git@github.com:tedconf/error_pages.git'
-
-And then execute:
-
-    $ bundle update error_pages
+If you have been consuming this repository as a gem, please copy the static HTML pages to your public folder instead.
 
 ## Contributing
 

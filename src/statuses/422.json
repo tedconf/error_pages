@@ -1,0 +1,6 @@
+{
+  "code": 422,
+  "title": "Unprocessable Entity",
+  "image": "something-wrong",
+  "message": "Sorry, that request contained semantic errors."
+}

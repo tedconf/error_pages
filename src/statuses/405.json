@@ -1,0 +1,6 @@
+{
+  "code": 405,
+  "title": "Method Not Allowed",
+  "image": "something-wrong",
+  "message": "Sorry, that request is not supported for this resource."
+}

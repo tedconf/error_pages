@@ -1,0 +1,6 @@
+{
+  "code": 401,
+  "title": "Not Authorized",
+  "image": "no-permission",
+  "message": "Sorry, you are not authorized to see that."
+}

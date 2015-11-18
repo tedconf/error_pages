@@ -1,0 +1,22 @@
+html,
+body {
+  background: white;
+  color: #3f3f3f;
+
+  margin: 0;
+  padding: 0;
+}
+
+html,
+input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #555;
+  text-decoration: underline;
+}
+a:hover {
+  color: #222;
+  text-decoration: underline;
+}

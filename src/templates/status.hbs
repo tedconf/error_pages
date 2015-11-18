@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang=en>
+<head>
+	<meta charset=utf-8>
+	<title>TED | {{code}}: {{title}}</title>
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+<h1>{{code}}</h1>
+
+<div class="message">
+	<h3>{{message}}</h3>
+
+	<img src="/assets/{{image}}.png" alt="{{title}}">
+
+	Please <a href="https://www.ted.com/contact">contact us</a>
+	and let us know what happened.
+</div>
+
+{{> ga}}
+<script>ga('send', 'event', 'error', '{{code}}', location.hostname + location.pathname)</script>
+</body>
+</html>

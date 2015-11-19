@@ -8,10 +8,16 @@
 </head>
 <body>
 
-<div class="message">
-	<img src="/assets/{{image}}" alt="{{title}}">
+<div class="t">
+	<div class="t__c">
+		<div class="Notice">
+			<img class="Notice__image" src="/assets/{{image}}">
 
-	{{{message}}}
+			<h1>{{title}} ({{code}})</h1>
+
+			{{{message}}}
+		</div>
+	</div>
 </div>
 
 {{> ga}}

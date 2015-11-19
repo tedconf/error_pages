@@ -1,8 +1,10 @@
 var csswring = require('csswring');
 var del = require('del');
+var frontMatter = require('gulp-front-matter');
 var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var inline = require('gulp-inline');
+var markdown = require('gulp-markdown');
 var merge = require('merge-stream');
 var minimize = require('gulp-minify-html');
 var postcss = require('gulp-postcss');
@@ -41,9 +43,16 @@ function clean() {
 Collect src/statuses/*.json into the statuses array.
 */
 function loadStatuses() {
-  return gulp.src('src/statuses/*.json')
+  return gulp.src('src/statuses/*.md')
+    .pipe(frontMatter({
+      property: 'yaml',
+      remove: true
+    }))
+    .pipe(markdown())
     .pipe(tap(function (file) {
-      statuses.push(JSON.parse(file.contents));
+      var data = file.yaml;
+      data.message = file.contents;
+      statuses.push(data);
     }));
 }
 

@@ -7,12 +7,13 @@ var inline = require('gulp-inline');
 var markdown = require('gulp-markdown');
 var merge = require('merge-stream');
 var minimize = require('gulp-minify-html');
+var pixrem = require('pixrem');
 var postcss = require('gulp-postcss');
 var rename = require('gulp-rename');
 var tap = require('gulp-tap');
 
 var statuses = [];
-var cssProcessors = [csswring];
+var cssProcessors = [pixrem, csswring];
 var hbOptions = {
   batch: ['src/templates/partials']
 };

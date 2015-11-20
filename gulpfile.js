@@ -12,10 +12,13 @@ var postcss = require('gulp-postcss');
 var rename = require('gulp-rename');
 var tap = require('gulp-tap');
 
+var helpers = require('./src/templates/helpers');
+
 var statuses = [];
 var cssProcessors = [pixrem, csswring];
 var hbOptions = {
-  batch: ['src/templates/partials']
+  batch: ['src/templates/partials'],
+  helpers: helpers
 };
 var inlineOptions = {
   base: 'src',

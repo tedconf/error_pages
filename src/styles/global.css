@@ -70,6 +70,9 @@ p {
 }
 
 ul {
+  font-size: 0.9rem;
+  list-style-type: circle;
+
   margin: 0;
   padding: 0;
 }
@@ -98,6 +101,7 @@ li {
 }
 
 .Search {
+  margin: 0.8rem 0;
   position: relative;
 
   width: 100%;

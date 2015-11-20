@@ -15,6 +15,8 @@
 
 			<h1>{{headline}} (<a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#{{code}}">{{code}}</a>)</h1>
 
+			{{{message}}}
+
 			{{#ifCond code '==' 404}}
 				<form class="Search" action="https://www.ted.com/search" role="search">
 					<input class="Search__input" placeholder="Search TED.com&hellip;" name="q">
@@ -22,13 +24,11 @@
 				</form>
 			{{/ifCond}}
 
-			{{{message}}}
-
 			<h2>What's next?</h2>
 			<ul>
-				<li><a href="#" onclick="history.back();return false">Go back to the previous page</a></li>
+				<li><a href="#" onclick="history.back();return false">Go to the previous page</a></li>
 				<li><a href="https://www.ted.com">Go to the TED.com homepage</a></li>
-				<li><a href="https://support.ted.com">Visit TED.com Help &amp; Support</a></li>
+				<li><a href="https://support.ted.com">Visit our Help Desk</a></li>
 			</ul>
 		</div>
 	</div>

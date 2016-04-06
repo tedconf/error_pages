@@ -17,12 +17,12 @@
 
 			{{{message}}}
 
-			{{#ifCond code '==' 404}}
+			{{#if (eq code 404)}}
 				<form class="Search" action="https://www.ted.com/search" role="search">
 					<input class="Search__input" placeholder="Search TED.com&hellip;" name="q">
 					<input class="Search__button" type="submit" value="Go">
 				</form>
-			{{/ifCond}}
+			{{/if}}
 
 			<h2>What's next?</h2>
 			<ul>

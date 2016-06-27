@@ -2,13 +2,11 @@
 
 This code generates static error pages (404, 500, etc.) for use on TED websites.
 
-## Deployment
+## Usage
 
-The fully generated static pages can be found in this repository's `dist` folder.
+Static HTML error pages can be found in this repository's [`dist`](https://github.com/tedconf/error_pages/tree/master/dist) folder. Copy these files to your own application by the method that seems most appropriate to you.
 
-Copy/deploy them to your own app however seems appropriate.
-
-## Development
+## Contributing
 
 ### Prerequisites
 

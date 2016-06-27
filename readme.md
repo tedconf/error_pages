@@ -1,18 +1,20 @@
-# TED.com Error Pages
+# TED.com error pages
 
-This code generates static error pages (404, 500, etc.) for use on TED websites.
+Static error pages (404, 500, etc.) for use on TED websites.
 
-## Usage
+## Adding error pages to your application
 
-Static HTML error pages can be found in this repository's [`dist`](https://github.com/tedconf/error_pages/tree/master/dist) folder. Copy these files to your own application by the method that seems most appropriate to you.
+Static HTML error pages can be found in this repository's [`dist`](https://github.com/tedconf/error_pages/tree/master/dist) folder.
 
-## Contributing
+Simply copy these files to your server or application.
 
-### Prerequisites
+## Contributing to this repository
+
+These notes are for developers wanting to create or modify error pages.
+
+### Installing dev dependencies
 
 Use [NVM](https://github.com/creationix/nvm) to make sure you have the correct Node version installed for local development.
-
-### Installation
 
 * `git clone git@github.com:tedconf/error_pages.git`
 * Change into the new directory
@@ -31,7 +33,9 @@ Static HTML output will be generated into the `dist` folder.
 
 ### Modifying code
 
-Source for the HTTP status pages can be found in `src/statuses`. Each status page is generated from a markdown file with some YAML front matter. Adding a new error page is as simple as creating a new `.md` file named according to that status code.
+* Source for the HTTP status pages can be found in `src/statuses`
+* Each status page is generated from a markdown file with some YAML front matter
+* Adding a new error page is as simple as creating a new `.md` file, named according to the status code
 
 Templates used to generate the surrounding HTML are kept in `src/templates`. `src/templates/status.hbs` is used for the markdown-based error pages. Custom templates can also be added to this directory (e.g. `src/templates/maintenance.hbs`) and will each generate their own HTML page.
 

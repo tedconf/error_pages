@@ -1,3 +1,4 @@
+var browserSync = require('browser-sync');
 var csswring = require('csswring');
 var del = require('del');
 var frontMatter = require('gulp-front-matter');
@@ -25,17 +26,6 @@ var inlineOptions = {
   css: function () { return postcss(cssProcessors); }
 };
 
-gulp.task('build', gulp.series(
-  loadStatuses,
-  buildStatusPages,
-  buildOtherPages
-));
-
-gulp.task('default', gulp.series(
-  clean,
-  'build'
-));
-
 /**
 Destroy old output.
 */
@@ -47,6 +37,7 @@ function clean() {
 Collect src/statuses/*.json into the statuses array.
 */
 function loadStatuses() {
+  statuses = [];
   return gulp.src('src/statuses/*.md')
     .pipe(frontMatter({
       property: 'yaml',
@@ -89,3 +80,41 @@ function buildOtherPages() {
     .pipe(minimize())
     .pipe(gulp.dest('dist'));
 }
+
+/**
+Reload Browser Sync.
+*/
+function reload(done) {
+  browserSync.reload();
+  done();
+}
+
+/**
+Produce a fresh build.
+*/
+var build = gulp.series(
+  clean,
+  loadStatuses,
+  buildStatusPages,
+  buildOtherPages,
+  reload
+);
+
+/**
+Serve the distribution directory and rebuild on source edit.
+*/
+function serve() {
+  browserSync({
+    server: { baseDir: 'dist', directory: true },
+  });
+
+  gulp.watch('src/**/*', build);
+}
+
+/**
+Default Gulp task.
+*/
+gulp.task('default', gulp.series(
+  build,
+  serve
+));

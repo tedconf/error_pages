@@ -28,7 +28,7 @@
 
 			<h2>What's next?</h2>
 			<ul>
-				<script>if (window.history && window.history.length > 1) document.write('<li><a href="#" onclick="history.back();return false" role="button">Go to the previous page</a></li>')</script>
+				<script>if (window.history && window.history.length > 1 && document.referrer && document.referrer.match(/^https?:\/\//)) document.write('<li><a href="#" onclick="history.back();return false" role="button">Go to the previous page</a></li>')</script>
 				<li><a href="https://www.ted.com">Go to the TED.com homepage</a></li>
 				<li><a href="https://support.ted.com">Visit our Help Desk</a></li>
 			</ul>

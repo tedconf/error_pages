@@ -1,7 +1,7 @@
 {
   "name": "error-pages",
   "private": true,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "csswring": "^4.0.0",

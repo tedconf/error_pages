@@ -31,3 +31,9 @@ Each status page is generated from a markdown file with some YAML front matter. 
 Templates used to generate the surrounding HTML are kept in `src/templates`. `src/templates/status.hbs` is used for the markdown-based error pages. Custom templates can also be added to this directory (e.g. `src/templates/maintenance.hbs`) and will each generate their own HTML page.
 
 CSS is kept in `src/styles` and `src/assets`. Any CSS or image assets referenced in the templates will be inlined automatically during the build process so that the static output is as portable as possible.
+
+## Cutting a new release
+
+1. `npm run build` to update distribution files
+2. Update the version number in `package.json`
+3. Commit, then tag your new version and push upstream

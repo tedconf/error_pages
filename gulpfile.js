@@ -112,6 +112,11 @@ function serve() {
 }
 
 /**
+Produce a fresh build.
+*/
+gulp.task('build', build);
+
+/**
 Default Gulp task.
 */
 gulp.task('default', gulp.series(

@@ -1,0 +1,51 @@
+{
+  "ContainerDefinitions": [
+    {
+      "Name": "error-pages",
+      "Image": "docker-registry.ted.com:5000/error_pages:2.0.2",
+      "Essential": true,
+      "Cpu": 50,
+      "Memory": 256,
+      "ExtraHosts": null,
+      "ReadOnlyRootFilesystem": false,
+      "MountPoints": null,
+      "VolumesFrom": null,
+      "User": "",
+      "Ulimits": null,
+      "DockerLabels": null
+    },
+    {
+      "Name": "error-pages-nginx",
+      "Image": "docker-registry.ted.com:5000/infrastructure-nginx-internal:1.10.3a",
+      "Essential": true,
+      "Environment": {
+        "BACKEND_APP_PORT": "3000",
+        "DISABLE_BASIC_AUTH": true,
+        "DISABLE_HTTPS_REDIRECT": true,
+        "SERVICE_80_NAME": "error-pages",
+        "SERVICE_80_TAGS": "web-backend"
+      },
+      "Cpu": 50,
+      "Memory": 128,
+      "PortMappings": [
+        {
+          "ContainerPort": 80,
+          "HostPort": null,
+          "Protocol": null
+        }
+      ],
+      "Links": [
+        "error-pages:application"
+      ],
+      "ExtraHosts": null,
+      "ReadOnlyRootFilesystem": false,
+      "MountPoints": null,
+      "VolumesFrom": null,
+      "User": "",
+      "Ulimits": null,
+      "DockerLabels": null
+    }
+  ],
+  "Family": "error-pages-staging",
+  "Volumes": null
+}

@@ -1,0 +1,10 @@
+{
+  "ClusterArn": "arn:aws:ecs:us-east-1:862214040873:cluster/ted-ecs-staging",
+  "ServiceName": "error-pages",
+  "DesiredCount": 2,
+  "TaskFamily": "error-pages-staging",
+  "DeploymentConfiguration": {
+    "MaximumPercent": 150,
+    "MinimumHealthyPercent": 50
+  }
+}

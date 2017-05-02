@@ -1,4 +1,5 @@
 var browserSync = require('browser-sync');
+var connect = require('gulp-connect');
 var csswring = require('csswring');
 var del = require('del');
 var frontMatter = require('gulp-front-matter');
@@ -101,15 +102,26 @@ var build = gulp.series(
 );
 
 /**
-Serve the distribution directory and rebuild on source edit.
+Demo the distribution directory and rebuild on source edit.
 */
-function serve() {
+function demo() {
   browserSync({
     server: { baseDir: 'dist', directory: true },
   });
 
   gulp.watch('src/**/*', build);
 }
+
+/**
+Serve the distribution directory
+*/
+gulp.task('serve', function () {
+  connect.server({
+    root: 'dist',
+    port: 3000,
+    host: '*',
+  });
+});
 
 /**
 Produce a fresh build.
@@ -121,5 +133,5 @@ Default Gulp task.
 */
 gulp.task('default', gulp.series(
   build,
-  serve
+  demo
 ));

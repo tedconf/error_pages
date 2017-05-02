@@ -1,7 +1,15 @@
 {
   "name": "error-pages",
-  "private": true,
   "version": "2.0.2",
+  "description": "Static error pages for TED websites.",
+  "author": "TED Tech",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tedconf/error_pages.git"
+  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "csswring": "^4.0.0",

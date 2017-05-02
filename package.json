@@ -31,8 +31,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "lint": "eslint {src,./}{/*.js,/**/*.js}",
     "serve": "gulp serve",
-    "test": "yarn lint"
+    "test": "eslint {src,./}{/*.js,/**/*.js}"
   }
 }

@@ -35,3 +35,21 @@ CSS is kept in `src/styles` and `src/assets`. Any CSS or image assets referenced
 1. `yarn build` to update distribution files
 2. Update the version number in `package.json`
 3. Commit, then tag your new version and push upstream
+
+## Deploy to staging
+
+After doing the above:
+
+```
+chewbacca buildpush -v #.#.#
+```
+
+Once that's done, update the "Image" property of the error-pages container in [chewbacca/ecs_task_definition-staging-master-us-east-1.json](../chewbacca/ecs_task_definition-staging-master-us-east-1.json) according to the new value in [.docker_image_latest_version](../.docker_image_latest_version) and:
+
+```
+chewbacca deploy -e staging
+```
+
+Once that's done, you can preview your changes in the staging environment:
+
+https://error-pages.staging.ted.com/

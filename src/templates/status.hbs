@@ -1,39 +1,39 @@
 <!doctype html>
 <html lang=en>
 <head>
-	<meta charset=utf-8>
-	<title>TED | {{code}}: {{title}}</title>
-	<meta name=viewport content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/styles/global.css">
+  <meta charset=utf-8>
+  <title>TED | {{code}}: {{title}}</title>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/global.css">
 </head>
 <body>
 
 <div class="t">
-	<div class="t__c">
-		<div class="Notice">
-			<img src="/assets/{{image}}">
+  <div class="t__c">
+    <div class="Notice">
+      <img src="/assets/{{image}}">
 
-			<h1>{{headline}} (<a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#{{code}}">{{code}}</a>)</h1>
+      <h1>{{headline}} (<a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#{{code}}">{{code}}</a>)</h1>
 
-			{{{message}}}
+      {{{message}}}
 
-			{{#if (or
-					(eq code 404)
-					(eq code 410))}}
-				<form class="Search" action="https://www.ted.com/search" role="search">
-					<input class="Search__input" placeholder="Search TED.com&hellip;" name="q">
-					<input class="Search__button" type="submit" value="Go">
-				</form>
-			{{/if}}
+      {{#if (or
+          (eq code 404)
+          (eq code 410))}}
+        <form class="Search" action="https://www.ted.com/search" role="search">
+          <input class="Search__input" placeholder="Search TED.com&hellip;" name="q">
+          <input class="Search__button" type="submit" value="Go">
+        </form>
+      {{/if}}
 
-			<h2>What's next?</h2>
-			<ul>
-				<script>if (window.history && window.history.length > 1 && document.referrer && document.referrer.match(/^https?:\/\//)) document.write('<li><a href="#" onclick="history.back();return false" role="button">Go to the previous page</a></li>')</script>
-				<li><a href="https://www.ted.com">Go to the TED.com homepage</a></li>
-				<li><a href="https://support.ted.com">Visit our Help Desk</a></li>
-			</ul>
-		</div>
-	</div>
+      <h2>What's next?</h2>
+      <ul>
+        <script>if (window.history && window.history.length > 1 && document.referrer && document.referrer.match(/^https?:\/\//)) document.write('<li><a href="#" onclick="history.back();return false" role="button">Go to the previous page</a></li>')</script>
+        <li><a href="https://www.ted.com">Go to the TED.com homepage</a></li>
+        <li><a href="https://support.ted.com">Visit our Help Desk</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 {{> ga}}

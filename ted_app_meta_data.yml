@@ -1,0 +1,6 @@
+version: 1.0
+vertical: Web
+production:
+  endpoint_url: https://www.ted.com/404.html
+staging:
+  endpoint_url: https://error-pages.staging.ted.com/

@@ -6,5 +6,15 @@
   "DeploymentConfiguration": {
     "MaximumPercent": 150,
     "MinimumHealthyPercent": 50
-  }
+  },
+	"PlacementStrategy": [
+		{
+			"Field": "attribute:ecs.availability-zone",
+			"Type": "spread"
+		},
+		{
+			"Field": "memory",
+			"Type": "binpack"
+		}
+	]
 }

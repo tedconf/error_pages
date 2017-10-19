@@ -4,8 +4,9 @@
       "Name": "error-pages",
       "Image": "docker-registry.ted.com:5000/error_pages:2.0.3",
       "Essential": true,
-      "Cpu": 50,
+      "Cpu": 30,
       "Memory": 256,
+      "MemoryReservation": 128,
       "ExtraHosts": null,
       "ReadOnlyRootFilesystem": false,
       "MountPoints": null,
@@ -25,8 +26,9 @@
         "SERVICE_80_NAME": "error-pages",
         "SERVICE_80_TAGS": "web-backend"
       },
-      "Cpu": 50,
-      "Memory": 128,
+      "Cpu": 20,
+      "Memory": 32,
+      "MemoryReservation": 16,
       "PortMappings": [
         {
           "ContainerPort": 80,

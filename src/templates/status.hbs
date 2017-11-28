@@ -24,6 +24,12 @@
         </form>
       {{/if}}
 
+      <div class="Error">
+        <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#{{code}}">HTTP Error {{code}}</a>{{#if error}}:
+          {{{error}}}
+        {{/if}}
+      </div>
+
       <h2>What's next?</h2>
       <ul>
         <script>if (window.history && window.history.length > 1 && document.referrer && document.referrer.match(/^https?:\/\//)) document.write('<li><a href="#" onclick="history.back();return false" role="button">Go to the previous page</a></li>')</script>

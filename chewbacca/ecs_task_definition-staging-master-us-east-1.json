@@ -2,7 +2,7 @@
   "ContainerDefinitions": [
     {
       "Name": "error-pages",
-      "Image": "docker-registry.ted.com:5000/error_pages:2.0.3",
+      "Image": "docker-registry.ted.com:5000/error_pages:2.1.0",
       "Essential": true,
       "Cpu": 50,
       "Memory": 256,

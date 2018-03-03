@@ -4,7 +4,7 @@ services:
     build: .
 
   nginx:
-    image: docker-registry.ted.com:5000/infrastructure-nginx-internal:1.10.3d
+    image: docker-registry.ted.com:5000/infrastructure-nginx-internal:1.12.2f
     environment:
       BACKEND_APP_PORT: "3000"
       DISABLE_BASIC_AUTH: "true"

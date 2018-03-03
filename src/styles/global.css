@@ -92,6 +92,22 @@ li {
   vertical-align: middle;
 }
 
+.Error {
+  background: #FAFAFA;
+  font-size: 90%;
+  padding: 0.8rem;
+  position: relative;
+  margin: 0.8rem -0.8rem;
+}
+.Error,
+.Error a {
+  color: #777;
+  text-decoration: none;
+}
+.Error a:after {
+  display: none;
+}
+
 .Notice {
   margin: 0 auto;
   padding: 0 2rem 1rem;

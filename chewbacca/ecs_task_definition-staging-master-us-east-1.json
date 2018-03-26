@@ -17,7 +17,7 @@
     },
     {
       "Name": "error-pages-nginx",
-      "Image": "docker-registry.ted.com:5000/infrastructure-nginx-internal:1.12.2f",
+      "Image": "docker-registry.ted.com:5000/infrastructure-nginx-internal:1.12.2i",
       "Essential": true,
       "Environment": {
         "BACKEND_APP_PORT": "3000",

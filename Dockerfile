@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:carbon
 
 # TED-specific ceremony
 LABEL com.ted.description="TED Error Pages"
@@ -9,12 +9,12 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-COPY yarn.lock /usr/src/app/
-RUN yarn install
+COPY package-lock.json /usr/src/app/
+RUN npm install
 
 # Bundle app source & build
 COPY . /usr/src/app
-RUN yarn build
+RUN npm run build
 
 # Start Server
-CMD [ "yarn", "serve" ]
+CMD [ "npm", "run", "serve" ]

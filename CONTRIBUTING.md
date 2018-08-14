@@ -6,14 +6,14 @@ These notes are for developers wanting to create or modify error pages in this r
 
 1. `git clone git@github.com:tedconf/error_pages.git`
 2. Change into the new directory
-3. `yarn install`
+3. `npm install`
 
 ## Local development
 
 After installing development dependencies (instructions above), simply run:
 
 ```
-yarn start
+npm start
 ```
 
 Gulp will build the error pages, start a server, and open a new window in your default browser listing the contents of the `dist` folder for you to preview error pages.
@@ -32,7 +32,7 @@ CSS is kept in `src/styles` and `src/assets`. Any CSS or image assets referenced
 
 ## Cutting a new release
 
-1. `yarn build` to update distribution files
+1. `npm run build` to update distribution files
 2. Update the version number in `package.json`
 3. Commit, then tag your new version and push upstream
 

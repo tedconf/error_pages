@@ -17,13 +17,14 @@
     },
     {
       "Name": "error-pages-nginx",
-      "Image": "docker-registry.ted.com:5000/infrastructure-nginx-internal:1.12.2i",
+      "Image": "docker-registry.ted.com:5000/nginx-internal:1.16.0v",
       "Essential": true,
       "Environment": {
         "BACKEND_APP_PORT": "3000",
-        "DISABLE_BASIC_AUTH": "true",
+        "SERVE": "backend",
         "SERVICE_80_NAME": "error-pages",
         "SERVICE_80_TAGS": "web-backend"
+        "TED_AUTH": "false"
       },
       "Cpu": 10,
       "Memory": 32,

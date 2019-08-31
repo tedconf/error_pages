@@ -4,11 +4,11 @@ services:
     build: .
 
   nginx:
-    image: docker-registry.ted.com:5000/infrastructure-nginx-internal:1.12.2f
+    image: docker-registry.ted.com:5000/nginx-internal:1.16.0v
     environment:
       BACKEND_APP_PORT: "3000"
-      DISABLE_BASIC_AUTH: "true"
-      DISABLE_HTTPS_REDIRECT: "true"
+      SERVE: backend
+      TED_AUTH: "false"
     links:
       - application
     ports:

@@ -23,7 +23,7 @@
         "BACKEND_APP_PORT": "3000",
         "SERVE": "backend",
         "SERVICE_80_NAME": "error-pages",
-        "SERVICE_80_TAGS": "web-backend"
+        "SERVICE_80_TAGS": "web-backend",
         "TED_AUTH": "false"
       },
       "Cpu": 10,

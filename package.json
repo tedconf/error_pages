@@ -1,10 +1,9 @@
 {
-  "name": "error-pages",
+  "name": "@tedprivate/error-pages",
   "version": "2.1.1",
   "description": "Static error pages for TED websites.",
   "author": "TED Tech",
   "license": "UNLICENSED",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:tedconf/error_pages.git"

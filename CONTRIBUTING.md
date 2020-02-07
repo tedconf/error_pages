@@ -32,9 +32,9 @@ CSS is kept in `src/styles` and `src/assets`. Any CSS or image assets referenced
 
 ## Cutting a new release
 
-1. `npm run build` to update distribution files
-2. Update the version number in `package.json`
-3. Commit, then tag your new version and push upstream
+1. `npm build` and commit new dist output
+2. [`npm version [major | minor | patch]`](https://docs.npmjs.com/cli/version)
+3. [`npm publish`](https://docs.npmjs.com/cli/publish)
 
 ## Deploy to staging
 

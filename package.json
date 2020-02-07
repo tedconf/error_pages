@@ -4,6 +4,9 @@
   "description": "Static error pages for TED websites.",
   "author": "TED Tech",
   "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:tedconf/error_pages.git"
@@ -30,6 +33,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
+    "prepublishOnly": "gulp build",
     "serve": "gulp serve",
     "test": "eslint {src,./}{/*.js,/**/*.js}"
   }
